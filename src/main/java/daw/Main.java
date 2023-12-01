@@ -14,6 +14,6 @@ public class Main {
         
         
         Naipe carta1=new Naipe();
-        System.out.println(carta1.);
+        System.out.println(carta1);
     }
 }

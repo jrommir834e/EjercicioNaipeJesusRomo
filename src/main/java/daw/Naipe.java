@@ -13,7 +13,7 @@ import java.util.Random;
 public class Naipe {
     
     private int numCarta;
-    private Palos paloNombre;
+    private Palos palo;
     private final Palos[] paloArray=Palos.values();
 
     //Creamos un constructor sin parámetros para poner un palo y numero de carta random
@@ -22,15 +22,16 @@ public class Naipe {
         Random r=new Random();
         
         this.numCarta = r.nextInt(1,11);
+        
         //Ponemos un palo random del array de palos
         int numRandom = r.nextInt(paloArray.length);
-        this.paloNombre=paloArray[numRandom];
+        this.palo=paloArray[numRandom];
     }
 
     //Creamos un constructor parametrizado
     public Naipe(int numCarta, Palos palo) {
         this.numCarta = numCarta;
-        this.paloNombre = palo;
+        this.palo = palo;
         
         //Controlamos que los numeros de cartas no puedan ser menor a 0 y mayor a 10
         if(numCarta<1||numCarta>10){
@@ -48,9 +49,19 @@ public class Naipe {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Naipe{");
-        sb.append("numCarta=").append(numCarta);
-        sb.append(", paloNombre=").append(paloNombre);
-        sb.append(", paloArray=").append(paloArray);
+        
+        if(numCarta==8){
+            sb.append("numCarta=").append("Sota");
+        }else if(numCarta==9){
+            sb.append("numCarta=").append("Caballo");
+        } else if(numCarta==10){
+            sb.append("numCarta=").append("Rey");
+        }else{
+               sb.append("numCarta=").append(numCarta);
+        }
+        
+     
+        sb.append(", palo=").append(palo);
         sb.append('}');
         return sb.toString();
     }
