@@ -11,5 +11,9 @@ package daw;
 public class Main {
     public static void main(String[] args) {
         
+        
+        
+        Naipe carta1=new Naipe();
+        System.out.println(carta1);
     }
 }
