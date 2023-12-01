@@ -43,6 +43,17 @@ public class Naipe {
         
         
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Naipe{");
+        sb.append("numCarta=").append(numCarta);
+        sb.append(", paloNombre=").append(paloNombre);
+        sb.append(", paloArray=").append(paloArray);
+        sb.append('}');
+        return sb.toString();
+    }
     
     
     
