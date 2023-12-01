@@ -10,4 +10,9 @@ package daw;
  */
 public class Naipe {
     
+    private int numCarta;
+    
+    
+    
+    
 }
