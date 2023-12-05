@@ -51,9 +51,9 @@ public class Naipe {
         sb.append("Naipe{");
         
         if(numCarta==8){
-            sb.append("numCarta=").append("Sota");
+            sb.append("numCarta=").append("Sotaa");
         }else if(numCarta==9){
-            sb.append("numCarta=").append("Caballo");
+            sb.append("numCarta=").append("Caballo0");
         } else if(numCarta==10){
             sb.append("numCarta=").append("Rey");
         }else{
